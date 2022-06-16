@@ -1,4 +1,9 @@
-## gRPC Type Script Server
+# gRPC with TypeScript and Node.js 
+Test projectgRPC with TypeScript and Node.js
 
-### packages
-- 
+## Commands
+### Start Server
+
+``` 
+$ npm start
+```
