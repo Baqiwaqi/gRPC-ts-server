@@ -57,26 +57,3 @@ export namespace FlightRequest {
         flightId: string,
     }
 }
-
-export class FlightResponse extends jspb.Message { 
-
-    hasFlight(): boolean;
-    clearFlight(): void;
-    getFlight(): Flight | undefined;
-    setFlight(value?: Flight): FlightResponse;
-
-    serializeBinary(): Uint8Array;
-    toObject(includeInstance?: boolean): FlightResponse.AsObject;
-    static toObject(includeInstance: boolean, msg: FlightResponse): FlightResponse.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: FlightResponse, writer: jspb.BinaryWriter): void;
-    static deserializeBinary(bytes: Uint8Array): FlightResponse;
-    static deserializeBinaryFromReader(message: FlightResponse, reader: jspb.BinaryReader): FlightResponse;
-}
-
-export namespace FlightResponse {
-    export type AsObject = {
-        flight?: Flight.AsObject,
-    }
-}

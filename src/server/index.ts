@@ -1,7 +1,7 @@
 import { Server, ServerCredentials, ServerUnaryCall, sendUnaryData, handleUnaryCall } from '@grpc/grpc-js';
 import { Service } from 'protobufjs';
 import { IFlightTrackingServer, FlightTrackingService } from '../proto/services/tracking_grpc_pb';
-import { FlightRequest, Flight, FlightResponse } from '../proto/services/tracking_pb';
+import { FlightRequest, Flight } from '../proto/services/tracking_pb';
 
 const server = new Server();
 const allFlights: Flight.AsObject[] = [
@@ -29,7 +29,7 @@ const allFlights: Flight.AsObject[] = [
 ];
 
 function getFlight(
-  call: ServerUnaryCall<FlightRequest, FlightResponse>,
+  call: ServerUnaryCall<FlightRequest, Flight>,
   callback: sendUnaryData<Flight>): void {
   const request = call.request;
   const flight = allFlights.filter((d) => d.flightId === request.getFlightId()).shift();

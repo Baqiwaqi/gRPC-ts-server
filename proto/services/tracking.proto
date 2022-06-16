@@ -17,7 +17,3 @@ service FlightTracking {
 message FlightRequest {
   string flight_id = 1;
 }
-
-message FlightResponse {
-  Flight flight = 1;
-}
