@@ -1,0 +1,11 @@
+# /proto/buf.yaml
+version: v1
+build:
+  roots:
+    - .
+lint:
+  use:
+    - DEFAULT
+breaking:
+  use:
+    - WIRE_JSON

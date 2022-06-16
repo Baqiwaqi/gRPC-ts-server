@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package flighttrackingservice;
+
+service FlightTrackingService {
+  rpc GetFlight(FlightTrackingRequest) returns (FlightTrackingResponse);
+}
+
+message FlightTrackingRequest {
+  string flight_id = 1;
+}
+
+message FlightTrackingResponse {
+  string flight_id = 1;
+  string flight_status = 2;
+}
